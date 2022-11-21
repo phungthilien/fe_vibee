@@ -18,7 +18,6 @@ import {Unit} from "../../../shared/model/Unit";
 })
 export class SellPosComponent implements OnInit {
 
-
   status: number | undefined;
   language!: string;
   listCart: any = "";
