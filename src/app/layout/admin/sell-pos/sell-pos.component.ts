@@ -17,7 +17,6 @@ import {Unit} from "../../../shared/model/Unit";
   styleUrls: ['./sell-pos.component.css']
 })
 export class SellPosComponent implements OnInit {
-
   status: number | undefined;
   language!: string;
   listCart: any = "";
