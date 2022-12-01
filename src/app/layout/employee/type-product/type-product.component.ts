@@ -131,7 +131,7 @@ export class TypeProductComponent implements OnInit {
 
   update() {
     this.updateTypeProductRequest={"name":this.updateTypeProductResponse.name,"description":this.updateTypeProductResponse.description,
-      "parentId": this.updateTypeProductResponse.parentid, "id": this.updateTypeProductResponse.id}
+      "parentId": this.updateTypeProductResponse.parentId, "id": this.updateTypeProductResponse.id}
     console.log(this.typeProductItems.Id)
     this.typeProductService.update(this.updateTypeProductRequest).subscribe(responsse => {
       this.typeResponse = responsse as CreateResponse;

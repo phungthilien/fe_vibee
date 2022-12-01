@@ -1,6 +1,6 @@
 export class UpdateTypeProductResponse {
   id!: number;
   name!: string;
-  parentid!: number;
+  parentId!: number;
   description!: string
 }

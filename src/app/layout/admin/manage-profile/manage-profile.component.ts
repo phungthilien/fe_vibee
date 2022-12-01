@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProfileRespone } from '../../../shared/model/response/profileRespone';
 import { ProfileService } from '../../../services/admin/user/profile.service';
 import { ProfileRequest } from '../../../shared/model/request/profileRequest';
-import { BaseResponse } from '../../../../../../../../vibee-fe-aws/fe_vibee/src/app/shared/model/response/BaseResponse';
 import { MessageService, ConfirmationService } from 'primeng/api';
+import {BaseResponse} from "../../../shared/response/BaseResponse";
 
 @Component({
   selector: 'app-manage-profile',
@@ -16,7 +16,7 @@ export class ManageProfileComponent implements OnInit {
   isShowFormEdit: boolean = false;
   request!: ProfileRequest;
   baseResponse!: BaseResponse
-  constructor(private profileService: ProfileService, private messageService: MessageService,private confirmationService: ConfirmationService) { 
+  constructor(private profileService: ProfileService, private messageService: MessageService,private confirmationService: ConfirmationService) {
     this.response = new ProfileRespone(),
     this.baseResponse = new BaseResponse()
 
@@ -28,7 +28,7 @@ export class ManageProfileComponent implements OnInit {
   edit(){
    this.profileService.edit().subscribe(response => {
     this.response= response as ProfileRespone
-    
+
   })
 }
   //  fullname!: string;
@@ -38,7 +38,7 @@ export class ManageProfileComponent implements OnInit {
   email!: string;
 
   editProfile(){
-    this.request = { "fullname": this.response.fullname, "cccd": this.response.cccd, 
+    this.request = { "fullname": this.response.fullname, "cccd": this.response.cccd,
     "address": this.response.address, "numberPhone": this.response.numberPhone,
      "email": this.response.email
     }

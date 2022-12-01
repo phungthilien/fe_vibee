@@ -1,12 +1,14 @@
 import {ExportItem} from "./ExportItem";
 
-export class ViewStallResult{
+export class CreateDetailBillResult {
   productId!:number;
   productName!:String;
   barCode!:string;
   importId!:number;
   img!:String;
   amount!:number;
-  items!:ExportItem[];
   productCode!:String;
+  unitId!:number;
+  outPrice!:number;
+  exportId!:number;
 }

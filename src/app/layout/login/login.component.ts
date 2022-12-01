@@ -7,9 +7,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 import {LoginService} from "../../services/login.service";
 import {LoginResponse} from "../../shared/response/LoginResponse";
 import { ForgotPasswordRequest } from 'src/app/shared/model/request/forgotPasswordRequest';
-import { BaseResponse } from '../../../../../../../vibee-fe-aws/fe_vibee/src/app/shared/model/response/BaseResponse';
 import { ManagerEmailService } from 'src/app/services/manager-public/manager-email.service';
 import { MessageService } from 'primeng/api';
+import {BaseResponse} from "../../shared/response/BaseResponse";
 
 @Component({
   selector: 'app-login',
@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
     private translateService:TranslateConfigService,
     private managerEmailService:ManagerEmailService ,
     private  messageService: MessageService
-  ) { 
+  ) {
     this.forgotPasswordRequest = new ForgotPasswordRequest()
     this.baseResponse = new BaseResponse()
   }
@@ -153,7 +153,7 @@ export class LoginComponent implements OnInit {
       this.isShowDialogForgotPass = true;
     }
     })
-  
+
   }
 
 }
