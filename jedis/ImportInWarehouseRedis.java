@@ -51,6 +51,8 @@ public class ImportInWarehouseRedis implements Serializable {
     @Indexed
     private String description;
     @Indexed
+    private String file;
+    @Indexed
     private List<ExportRedis> exportRedis;
 
 }

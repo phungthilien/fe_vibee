@@ -26,5 +26,9 @@ public class ExportRedis implements Serializable {
     private BigDecimal outPrice;
     @Indexed
     private int unitId;
+    @Indexed
+    private String file;
+    @Indexed
+    private String qrCode;
 
 }
